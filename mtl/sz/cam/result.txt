@@ -1,0 +1,430 @@
+---------- perl ----------
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'new_rename.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'creat_profile.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'move_zero.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'register_layers.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'auto_rows.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'd_size.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'add_attribute.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'del_out_by_box.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'creat_pcb.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'auto_inport_job.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Can't locate Win32/Env.pm in @INC (@INC contains: C:/Perl/site/lib C:/Perl/lib .) at d:/myscript/sz/cam/Shave_copper.pl line 7.
+BEGIN failed--compilation aborted at d:/myscript/sz/cam/Shave_copper.pl line 7.
+'d:/myscript/sz/cam/Shave_copper.pl' had compilation errors.
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'close_and_exit.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'open_pcb.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'out_to_drill.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'slot_to_box.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'rev_drill.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'check_drill.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'add_lead_drill.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'select_drawn.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'del_nfp.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'del_outprof.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'scal.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'display_week.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'add_mark.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'open_orig.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+add_fiducial_tool.pl:
+	error: Can't locate add_fiducial_tool.pl
+	refby: D:\myscript\sz\cam\sub_panel.pl line 178
+sub_box_vcut.pl:
+	error: Can't locate sub_box_vcut.pl
+	refby: D:\myscript\sz\cam\sub_panel.pl line 179
+sub_do.pl:
+	error: Can't locate sub_do.pl
+	refby: D:\myscript\sz\cam\sub_panel.pl line 177
+sub_fill.pl:
+	error: Can't locate sub_fill.pl
+	refby: D:\myscript\sz\cam\sub_panel.pl line 180
+
+Summary: 4 errors and 0 warnings
+
+Created 'sub_panel.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'impedance.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'creat_dd_map.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'size_label.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'panle_calculate.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'mark_line_width.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'mdgj_no_scale.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'add_Corner_drl.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'add_vut_hole.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'jspanel.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'open_panel.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'write_me.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'output.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'ADM.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'new_print_ss.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'new_print_old.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'calcu_gold_area.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'areatk.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'output_film.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'add_qiepian.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'auto_rout.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'del_tmp_layer.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'open_pcs.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'erp_base_info.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'erp_insert_drill.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'erp_insert_film.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'input_pcb.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'copy_net_orig.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'copy_net_pcb.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'negative_to_positive.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'negative_tidy.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'Auto_shrink_cu.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'net_analyzer.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'output_vut.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'cop_orig.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'compair.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'auto_to__surface.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'line_2_pad.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'checklists.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'vut.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'gold_finger.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'message.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'Delete_ff_file.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'save.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'ftp_put_engbak.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'erp_cut_material.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'jspanel.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'circuitry_repair.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'optimize_levels.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'contourize.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'checklists.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'auto_surface.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'input_pcb.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'film_online.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'jssheet.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'panel_new.exe'
+PerlApp 8.1.0 build 291424
+Copyright (C) 1998-2009 ActiveState Software Inc. All rights reserved.
+Commercial license for Administrator <Administrator@TEAM-BEAN.com>
+
+Created 'sub_panel.exe'
+
+输出完成 (耗时: 5 分 28 秒) - 正常终止

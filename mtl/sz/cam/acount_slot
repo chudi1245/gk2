@@ -1,0 +1,32 @@
+#!/usr/bin/csh
+set step = $step
+if ($step != pnl) then
+PAUSE "Please running pnl !"
+exit
+endif 
+COM units,type=mm
+COM display_layer,name=drl,display=yes,number=1
+COM work_layer,name=drl
+COM flatten_layer,source_layer=drl,target_layer=drlslot
+COM display_layer,name=drl,display=no,number=1
+COM display_layer,name=drlslot,display=yes,number=1
+COM work_layer,name=drlslot
+COM filter_set,filter_name=popup,update_popup=no,feat_types=pad\;surface\;arc\;text
+COM filter_area_strt
+COM filter_area_end,layer=,filter_name=popup,operation=select,\
+area_type=none,inside_area=no,intersect_area=no,lines_only=no,\
+ovals_only=no,min_len=0,max_len=0,min_angle=0,max_angle=0
+COM filter_reset,filter_name=popup
+COM sel_delete
+COM filter_set,filter_name=popup,update_popup=no,include_syms=r809.85
+COM filter_area_strt
+COM filter_area_end,layer=,filter_name=popup,operation=select,\
+area_type=none,inside_area=no,intersect_area=no,lines_only=no,\
+ovals_only=no,min_len=0,max_len=0,min_angle=0,max_angle=0
+COM filter_reset,filter_name=popup
+COM sel_delete
+
+COM info, out_file=C:/tmp/slot_info,units=mm,args=  -t layer -e $job/pcb/drlslot -m display -d SLOT_HIST
+set path = "/newsz/pl"
+$path/Acont_slot.pl 
+
