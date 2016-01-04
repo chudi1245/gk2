@@ -2,7 +2,7 @@
 ######10-10-2011  ‘§Õ∂º∆À„
 use Win32;
 use Win32::API;
-
+use Tk;
 use Genesis;
 use Encode;
 use encoding 'euc_cn';

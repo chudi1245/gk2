@@ -2,6 +2,7 @@
 ##   zq
 ##   2010.02.12
 use strict;
+use Tk;
 use Win32;
 use Genesis;
 use FBI;

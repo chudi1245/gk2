@@ -1,5 +1,6 @@
 #!/usr/bin/perl 
 use strict;
+use Tk;
 use Net::FTP;
 use Win32;
 use Tk::BrowseEntry;
@@ -52,7 +53,7 @@ MainLoop;
 sub check_error {
 	return "use name error"  unless $use_name;
 	return "pass code error" unless $pass_code;
-	return "file name error" if $file_number !~ m/^[mMdDsS]\d{3,5}$/;
+	return "file name error" if $file_number !~ m/^[mMdDsS]\d{3,6}$/;
 	return ;
 }
 

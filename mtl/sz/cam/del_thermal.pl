@@ -2,6 +2,7 @@
 ##    zhouqing 
 ##    2010.05.13
 use strict;
+use Tk;
 use Genesis;
 use FBI;
 our $host = shift;

@@ -1,5 +1,6 @@
 #!/usr/bin/perl 
 ##    zhouqing 
+use Tk;
 use strict;
 use Net::FTP;
 use Win32;

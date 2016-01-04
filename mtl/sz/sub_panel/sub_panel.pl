@@ -2,10 +2,14 @@
 ##    zhouqing 
 ##    2010.05.27
 use strict;
-use lib "D:/xxx/camp/lib";
+use Tk;
+use Cwd qw/abs_path/;
+use File::Basename;
+use lib abs_path(dirname(__FILE__));
 use Win32;
 use FBI;
 use Genesis;
+our $sub_path = abs_path(dirname(__FILE__));
 our $host = shift; our $f=new Genesis($host); our $JOB=$ENV{JOB}; our $STEP=$ENV{STEP};
 
 our ($mw,$dx,$dy,$nx,$ny,$width,$direction,$joint,$size_fiducial,$size_ring,$size_mask,$size_tool,$px,$py);
@@ -173,10 +177,10 @@ sub apply {
 	#do "d:/xxx/camp/sub_panel/add_fiducial_tool.pl";
 	#do "d:/xxx/camp/sub_panel/sub_box_vcut.pl";
 	#do "d:/xxx/camp/sub_panel/sub_fill.pl";
-	require "sub_do.pl";
-	require "add_fiducial_tool.pl";
-	require "sub_box_vcut.pl";
-	require "sub_fill.pl";
+	require "$sub_path/sub_do.pl";
+	require "$sub_path/add_fiducial_tool.pl";
+	require "$sub_path/sub_box_vcut.pl";
+	require "$sub_path/sub_fill.pl";
 
     $f->COM('disp_on');
 	clear('box','drl');

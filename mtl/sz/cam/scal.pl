@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 use perl_gen;
+use Tk;
 use Win32;
 use FBI;
 use Win32::API;

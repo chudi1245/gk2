@@ -2,6 +2,7 @@
 ####
 ####  zq 20110113 creat a file number and open the input package a
 use strict;
+use Tk;
 use Genesis;
 use Win32;
 use FBI;

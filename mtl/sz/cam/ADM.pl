@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 ##zq 20110.01.21
 use strict;
+use Tk;
 use Win32;
 use Genesis;
 use FBI;

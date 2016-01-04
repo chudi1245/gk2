@@ -2,6 +2,7 @@
 use strict;
 use encoding "utf8";
 use Win32;
+use Tk;
 use Tk::Pane;
 use Genesis;
 use FBI;

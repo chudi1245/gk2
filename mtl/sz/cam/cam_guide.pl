@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use Tk;
 use lib "D:/xxx/camp/lib";
 use Win32;
 use Encode;

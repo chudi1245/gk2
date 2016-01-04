@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use Tk;
 use DBD::ODBC;
 use Encode;
 use Win32;

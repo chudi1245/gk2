@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 use Win32;
 use FBI;
+use Tk;
 use Genesis;
 use Encode;
 use encoding 'euc_cn';

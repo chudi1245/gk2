@@ -1,6 +1,7 @@
 #! /usr/bin/perl
 ##   zq
 use strict;
+use Tk;
 use Win32;
 use Win32::API;
 use Encode;

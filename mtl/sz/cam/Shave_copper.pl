@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 ##use lib "$ENV{GENESIS_DIR}/sys/scripts/CAM_POU/perl";####
 use perl_gen;
+use Tk;
 use Genesis;
 use FBI;
 use Win32::GUI();

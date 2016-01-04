@@ -1,5 +1,6 @@
 #! /usr/bin/perl
 use strict;
+use Tk;
 use Genesis;
 use lib "D:/xxx/camp/lib";
 use FBI;

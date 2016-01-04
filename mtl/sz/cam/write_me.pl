@@ -3,6 +3,7 @@
 ##   2010.12.30
 use strict;
 use Win32;
+use Tk;
 use Tk::Pane;
 use Genesis;
 use Encode;

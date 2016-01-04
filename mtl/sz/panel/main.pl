@@ -1,13 +1,17 @@
 #!/usr/bin/perl 
 ##    zhouqing 
 use strict;
+use Tk;
 use warnings;
-use lib "D:/all/camp/panel/panel";
+use Cwd qw/abs_path/;
+use File::Basename;
+use lib abs_path(dirname(__FILE__));
 use Win32;
 use Genesis;
 use FBI;
 use Encode ;
 our $host = shift; our $f = new Genesis($host); our $JOB = $ENV{JOB}; our $STEP = $ENV{STEP};
+our $p_path = abs_path(dirname(__FILE__));
 ###_________________________________________
 my ($mw,$row,$column,$tk_info,$schedule)=(undef,0,0);
 our ($use,$px,$py,$dx,$dy,$margin_top,$margin_bot,$margin_rig,$margin_lef)=qw(zq 12 19 2 2);
@@ -26,7 +30,7 @@ our ($base_step);
 ###_________________________________________
 kysy();
 unit_set('inch');
-require "info_pre.pl"; 
+require "$p_path/info_pre.pl"; 
 ###____________________________________________
 $mw=MainWindow->new;  $mw->geometry("+200+100");  $mw->title("Better and better QQ-190170444");
 my %title=(
@@ -113,26 +117,26 @@ sub _schedule{
 sub apply {
 	$f->COM('disp_off');
 	##check entry
-	require "panel.pl";
-	require "info.pl";
-	require "add_sypad.pl";
-	require "add_inner_book.pl";
-	require "add_line_frame.pl"; 
-	require "add_film_fn.pl"; 
-	require "add_target_drill.pl"; 
-	require "add_target_rivet.pl"; 
-	require "add_target_tool.pl";
-	require "add_confine_line.pl";
-	require "add_butfly_pad.pl";
-	require "add_min_line.pl";
-	require "add_silk_ref.pl";
-	require "add_scale_test.pl";
-	require "add_slice.pl";
-	require "add_black_film_solder.pl";
-	require "add_lyaer_warp.pl";
-	require "fill_copper.pl";
-	require "add_drill_fn.pl";
-	require "add_end_drill.pl";
+	require "$p_path/panel.pl";
+	require "$p_path/info.pl";
+	require "$p_path/add_sypad.pl";
+	require "$p_path/add_inner_book.pl";
+	require "$p_path/add_line_frame.pl"; 
+	require "$p_path/add_film_fn.pl"; 
+	require "$p_path/add_target_drill.pl"; 
+	require "$p_path/add_target_rivet.pl"; 
+	require "$p_path/add_target_tool.pl";
+	require "$p_path/add_confine_line.pl";
+	require "$p_path/add_butfly_pad.pl";
+	require "$p_path/add_min_line.pl";
+	require "$p_path/add_silk_ref.pl";
+	require "$p_path/add_scale_test.pl";
+	require "$p_path/add_slice.pl";
+	require "$p_path/add_black_film_solder.pl";
+	require "$p_path/add_lyaer_warp.pl";
+	require "$p_path/fill_copper.pl";
+	require "$p_path/add_drill_fn.pl";
+	require "$p_path/add_end_drill.pl";
 	##require "report_result.pl";
     $f->COM('disp_on');
 	_schedule(100);  

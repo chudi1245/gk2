@@ -1,6 +1,7 @@
 #!/usr/bin/perl 
 ##    zhouqing 
 use strict;
+use Tk;
 use Genesis;
 use FBI;
 our $host = shift;

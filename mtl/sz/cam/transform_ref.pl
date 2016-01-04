@@ -2,6 +2,7 @@
 ##transform the words in the select file "D10 D11" to "one-D226 four-D233"
 ##zq 2010.12.28
 use strict;
+use Tk;
 use Encode;
 use Encode::CN;
 use Win32;

@@ -3,6 +3,7 @@
 use strict;
 use Genesis;
 use FBI;
+use Tk;
 our $host = shift;
 our $f = new Genesis($host);
 our $JOB = $ENV{JOB};

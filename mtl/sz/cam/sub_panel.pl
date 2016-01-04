@@ -2,6 +2,7 @@
 ##    zhouqing 
 ##    2010.05.27
 use strict;
+use Tk;
 use Win32;
 use Genesis;
 use FBI;

@@ -2,6 +2,7 @@
 ##    zhouqing 1
 ##    2010.05.27
 use strict;
+use Tk;
 no strict "refs";
 use Genesis;
 use Win32;

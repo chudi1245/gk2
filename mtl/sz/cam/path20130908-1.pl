@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 use strict;
+use Tk;
 use Win32;
 use encoding 'euc_cn';
 use Encode;

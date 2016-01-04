@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use Tk;
 use Win32;
 use Tk::Pane;
 use Genesis;
@@ -56,7 +57,7 @@ $mw->Checkbutton(-variable=>\$checkbutton_value[$_],-width=>8)->grid(-column=>1,
 
 $mw->Button(-text=>'Apply',-width=>8,-command=>\&apply,-font => [-family=>'ºÚÌå',-size=>14],-width=>8)->grid(-column=>1,-row=>$row+1,);
   
-MainLoop;
+#MainLoop;
 
 sub apply{
 

@@ -2,6 +2,7 @@
 ###zq 2011.05.16
 ##_________________________________________
 use strict;
+use Tk;
 use Genesis;
 use FBI;
 use Win32;

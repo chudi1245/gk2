@@ -2,6 +2,7 @@
 ##
 ## zq 2011.01.13
 use strict;
+use Tk;
 use Genesis;
 use lib "D:/xxx/camp/lib";
 use FBI;

@@ -2,6 +2,7 @@
 ##   zhouqing 
 ##   2009.08.12
 use strict;
+use Tk;
 use Net::FTP;
 use Win32;
 use FileHandle;

@@ -3,6 +3,7 @@
 ## zq 2011.01.13 compaire layer
 ## add mouse wheel adjust the tolence 2011.01.21
 use strict;
+use Tk;
 use Win32;
 use Genesis;
 use FBI;

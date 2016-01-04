@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 use Genesis;
 use strict;
+use Tk;
 use warnings;
 
 our $host = shift;

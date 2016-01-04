@@ -6,6 +6,7 @@
 ## Describe: transit genesis cmd line  Cshell to perl
 ##_________________________________
 use strict;
+use Tk;
 use Win32;
 
 kysy();

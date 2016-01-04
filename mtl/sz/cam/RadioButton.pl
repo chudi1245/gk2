@@ -3,6 +3,7 @@
 # create radio buttons
 use Win32;
 use strict;
+use Tk;
 
 my $mw = MainWindow->new;
 $mw->geometry("300x100");

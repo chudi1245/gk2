@@ -7,13 +7,13 @@ use strict;
 use Win32;
 use Genesis;
 use FBI;
+use Tk;
 our $host = shift;
 our $f    = new Genesis($host);
 our $JOB  = $ENV{JOB};
 our $STEP = $ENV{STEP};
 my ($column,$row,$mw,$method)=(0,0,undef,'Box_peak');
 ###_____________________________
-kysy();
 
 unless ($STEP) { 
 	 $STEP=read_form($JOB,'eng','E102');

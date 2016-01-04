@@ -2,6 +2,7 @@
 ##   zq
 ##   2010.12.30
 use strict;
+use Tk;
 use Genesis;
 use FBI;
 our $host = shift;

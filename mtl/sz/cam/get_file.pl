@@ -2,6 +2,7 @@
 ##    zhouqing 
 ##    2010.06.17
 use strict;
+use Tk;
 use Net::FTP;
 use Win32;
 use File::Find;

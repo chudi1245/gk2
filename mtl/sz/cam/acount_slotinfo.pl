@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 #!/usr/bin/perl
+use Tk;
 use FBI;
 use Genesis;
 use Encode;

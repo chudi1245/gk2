@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
+use Tk;
 ####________new
 sub new {
 	my @default=('x-name',0,0,'di20x20','no','no');

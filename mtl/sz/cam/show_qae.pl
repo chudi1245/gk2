@@ -3,6 +3,7 @@
 ##    2010.06.04
 {
 use strict;
+use Tk;
 use POSIX qw/strftime/;
 use FileHandle;
 use Genesis;

@@ -2,6 +2,7 @@
 ##
 ## zq 20110113 add drill attribute
 use strict;
+use Tk;
 use Win32;
 use Genesis;
 use FBI;

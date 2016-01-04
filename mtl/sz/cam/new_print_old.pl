@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use Tk;
 use Genesis;
 use FBI;
 use File::Path;
