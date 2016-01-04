@@ -1,6 +1,7 @@
 #! /usr/bin/perl
 use strict;
 use Win32;
+use Tk;
 use Tk::Pane;
 use Genesis;
 use FBI;
