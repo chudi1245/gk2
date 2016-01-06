@@ -1,7 +1,6 @@
 #!/usr/bin/perl 
 ##    zhouqing 
 use strict;
-use Tk;
 use Genesis;
 use FBI;
 our $host = shift;
@@ -11,9 +10,6 @@ our $STEP = $ENV{STEP};
 my ($t,@display,$ref,@row,@row_name,@row_type)=(1,);
 
 ##______________________
-
-kysy();
-
 
 $f->COM ('get_disp_layers'); 
 @display = split  ' ',$f->{COMANS};
