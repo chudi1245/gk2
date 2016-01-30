@@ -11,28 +11,29 @@ use Genesis;
 use FBI;
 use Encode ;
 our $host = shift; our $f = new Genesis($host); our $JOB = $ENV{JOB}; our $STEP = $ENV{STEP};
-our $p_path = abs_path(dirname(__FILE__));
+my $p_path = abs_path(dirname(__FILE__));
+print "$p_path\n";
 ###_________________________________________
 my ($mw,$row,$column,$tk_info,$schedule)=(undef,0,0);
 our ($use,$px,$py,$dx,$dy,$margin_top,$margin_bot,$margin_rig,$margin_lef)=qw(zq 12 19 2 2);
 
 our $margin={top=>5,bot=>5,lef=>5,rig=>5,};
-
 our (@gROWrow,@gROWcontext,@gROWside,@gROWlayer_type,@gROWname,@gROWtype,@gROWfoil_side,);
-
 our (%grid,$SR_xmin,$SR_ymin,$SR_xmax,$SR_ymax);
 our (%layer_class,$layer_number);
 our ($face_type,$tech_type,$orientation);
 our (@polarity,@mirror,@x_scale,@y_scale);
 our (@sypad,@butfly,@min_line,@silk_ref,%frame);
 our ($base_step);
+our $fn_xmax = 1.11;
+
 *I_M=\25.397; our $I_M;
 ###_________________________________________
 kysy();
 unit_set('inch');
 require "$p_path/info_pre.pl"; 
 ###____________________________________________
-$mw=MainWindow->new;  $mw->geometry("+200+100");  $mw->title("Better and better QQ-190170444");
+$mw=Tk::MainWindow->new;  $mw->geometry("+200+100");  $mw->title("Better and better QQ-190170444");
 my %title=(
    use              =>['Label',   0,  0,  '-text',          '用户',       ],
    use_entry        =>['Entry',   1,  0,  '-textvariable',  \$use,       ],
