@@ -2,36 +2,35 @@
 ##    zhouqing 
 use strict;
 use warnings;
-use Cwd qw/abs_path/;
-use File::Basename;
-use lib abs_path(dirname(__FILE__));
-use Tk;
+##use lib "D:/all/camp/panel/panel";
+use Win32;
 use Genesis;
 use FBI;
 use Encode ;
-our $host = shift;
-our $f = new Genesis($host);
-our $JOB = $ENV{JOB};
-our $STEP = $ENV{STEP};
+our $host = shift; our $f = new Genesis($host); our $JOB = $ENV{JOB}; our $STEP = $ENV{STEP};
+
+kysy();
 
 ###_________________________________________
-my $p_path = abs_path(dirname(__FILE__));
 my ($mw,$row,$column,$tk_info,$schedule)=(undef,0,0,'MTL');
+
 our ($use,$vcut);
 our ($px,$py,$dx,$dy,$Customer_code,$FN_Version,$margin_top,$margin_bot,$margin_rig,$margin_lef,$g_moudel,)=qw( 9 12 2 2);
 our $margin={top=>5,bot=>5,lef=>5,rig=>5,};
 our (@gROWrow,@gROWcontext,@gROWside,@gROWlayer_type,@gROWname,@gROWtype,@gROWfoil_side,);
+
 our (%grid,$SR_xmin,$SR_ymin,$SR_xmax,$SR_ymax,$cy_area);
 our (%layer_class,$layer_number);
 our ($face_type,$tech_type,$orientation,$g_board);
 our (@polarity,@mirror,@x_scale,@y_scale);
 our $addFour = "no";
+
 #将加工具孔的坐标定义为全局变量。
 our ($target_tool,$start_point);
+
 our (@sypad,@butfly,@min_line,@silk_ref,%frame);
 our ($base_step);
 *I_M=\25.397; our $I_M;
-our $fn_xmax = 0; # file_number x max position
 
 ###_______________________
 my $test_pcb=exists_entity('step',"$JOB/qie");
@@ -51,9 +50,29 @@ if ($test_orignet eq 'no') {
 	exit;
 }
 
+if ( exists_layer('gtl')  eq  'yes' ) {
+	my $filepath = "c:/genesis/fw/jobs/$JOB/output/net.log";
+	if (-e $filepath) {
+		open (FILE,"$filepath");
+		my $result = (<FILE>);
+		close FILE;
+		my @result=split ' ',$result;
+		if ($result[0]!=0 || $result[1]!=0 ) {
+			p__("please make sure that the net is no problem ");
+			exit;
+		}
+	}else{
+		p__("please operation network analysis before output data ");
+		exit; 
+	}
+} 
+
+
+
 ###_________________________________________
+#kysy();
 unit_set('inch');
-require "$p_path/info_pre.pl"; 
+require "info_pre.pl"; 
 ###____________________________________________
 $mw=MainWindow->new;  $mw->geometry("+200+100");  
 $mw->title("Better and better QQ-214284213");
@@ -119,13 +138,16 @@ if ($layer_number > 2) {
 		$mw->Entry(-textvariable=>\$y_scale[$_],-width=>10,)->grid(-column=>4, -row=>$_+$add);
 	} 
 }	
-$mw->Button(-text=>decode('utf8','same scale'),-width=>10,-command=>\&same_scale)->grid(-column=>5, -row=>9);
-$mw->Button(-text=>decode('utf8','rush'),-width=>10,-command=>\&brush)->grid(-column=>0, -row=>50);
-$mw->Button(-text=>decode('utf8','default'),-width=>10,-command=>\&default)->grid(-column=>1, -row=>50);
+$mw->Button(-text=>decode('utf8','缩放相同'),-width=>10,-command=>\&same_scale)->grid(-column=>5, -row=>9);
+
+$mw->Button(-text=>decode('utf8','刷新'),-width=>10,-command=>\&brush)->grid(-column=>0, -row=>50);
+$mw->Button(-text=>decode('utf8','缺省'),-width=>10,-command=>\&default)->grid(-column=>1, -row=>50);
+
 ##$mw->Button(-text=>decode('utf8','全设置'),-width=>10,-command=>\&brush)->grid(-column=>3, -row=>50);
 ##$mw->Button(-text=>decode('utf8','全设置'),-width=>10,-command=>\&default)->grid(-column=>4, -row=>50);
 $mw->Entry(-textvariable =>\$FN_Version,  -width=>10,)->grid(-column=>0, -row=>51);
-$mw->Label(-text=>decode('utf8','version'),-width=>10,)->grid(-column=>1, -row=>51);
+$mw->Label(-text=>decode('utf8','版本'),-width=>10,)->grid(-column=>1, -row=>51);
+
 $mw->Button(-text=>decode('utf8','Apply'),-width=>10,-command=>\&apply)->grid(-column=>5, -row=>51);
 $mw->Label(-textvariable=>\$tk_info,-width=>70,-relief=>'groo')->grid(-column=>0, -row=>52,-columnspan=>6);
 $mw->ProgressBar(-borderwidth=>1, -colors=>[0,'#009900'], -length=>420,-variable=>\$schedule )->grid(-column=>0,-row=>53,-columnspan=>8); #
@@ -156,6 +178,7 @@ sub default {
 				} else { 
 					$mirror[$id] = 'M'; 
 				}
+
 				if ($gROWside[$_] eq 'inner') { $polarity[$id] = '--';  } else { $polarity[$id] = '+'; }
 				last;
 			}
@@ -185,50 +208,58 @@ sub apply {
     if ($yesno_button eq "No") {return};
 
 	##check entry
-	my $state=require "$p_path/panel.pl";
+	my $state=require "panel.pl";
 	$f->COM('disp_off');
     ##if ($state > 500) {  $tk_info=$state; $mw->update();return 0; };                
-	require "$p_path/info.pl";    ## 定义丝印定位pad变量。
-	require "$p_path/add_sypad.pl";  ## 加丝印定位pad
-	require "$p_path/add_inner_book.pl";  ##加内层book对位图形
-	require "$p_path/add_line_frame.pl";  ##加内层大的大5MM 边框线。
-	require "$p_path/add_cy.pl";          ## 加CY图形。
-	require "$p_path/add_second_sypad.pl";  ##加第二套丝印定位pad
-	require "$p_path/add_film_fn.pl";       ##加菲林上面的FN标识。
-	require "$p_path/add_target_drill.pl";  ##加靶孔。
-	require "$p_path/add_target_rivet.pl";  ##加铆钉孔。
-	require "$p_path/add_target_tool.pl";   ##加工具孔。
-	require "$p_path/add_confine_line.pl";  ## 加边角线。
-	require "$p_path/add_layer_number.pl";     ###加层数字；
-	require "$p_path/add_vut_toolhole.pl";       ###加vut定位孔；
+	require "info.pl";    ## 定义丝印定位pad变量。
+	require "add_sypad.pl";  ## 加丝印定位pad
+	require "add_inner_book.pl";  ##加内层book对位图形
+	require "add_line_frame.pl";  ##加内层大的大5MM 边框线。
+	require "add_cy.pl";          ## 加CY图形。
+	require "add_second_sypad.pl";  ##加第二套丝印定位pad
+	require "add_film_fn.pl";       ##加菲林上面的FN标识。
+	require "add_target_drill.pl";  ##加靶孔。
+	require "add_target_rivet.pl";  ##加铆钉孔。
+	require "add_target_tool.pl";   ##加工具孔。
+	require "add_confine_line.pl";  ## 加边角线。
+
+	require "add_vut_toolhole.pl";       ###加vut定位孔；
+
 	##require "add_butfly_pad.pl";		 ##加蝴蝶对位图形。
-	require "$p_path/add_smrs_pad.pl";           ##加防爆对位pad 修改于2014-10-07日。
-	require "$p_path/add_min_line.pl";		 	 ##加最小线宽标识。
-	require "$p_path/add_silk_ref.pl";			 ##加打印字符对位图形。       
-	require "$p_path/add_scale_test.pl";         #加整英寸的背板标记
+	require "add_smrs_pad.pl";           ##加防爆对位pad 修改于2014-10-07日。
+
+	require "add_min_line.pl";		 	 ##加最小线宽标识。
+	require "add_silk_ref.pl";			 ##加打印字符对位图形。       
+	require "add_scale_test.pl";         #加整英寸的背板标记
+
 	##6.23修改。   2、原来板边的切片模块需要恢复，不能删
-	require "$p_path/add_slice.pl";              #加切片孔
-	require "$p_path/add_black_film_solder.pl";  #加黑片对位孔
-	require "$p_path/add_lyaer_warp.pl";         #加层对位图形。
-	require "$p_path/add_end_silk_drill.pl";     #加尾孔
-	require "$p_path/fill_copper.pl";			 #电镀边铺铜
+	require "add_slice.pl";              #加切片孔
+	require "add_black_film_solder.pl";  #加黑片对位孔
+	require "add_lyaer_warp.pl";         #加层对位图形。
+	require "add_end_silk_drill.pl";     #加尾孔
+	require "fill_copper.pl";			 #电镀边铺铜
 	##MOdify mzb 2013.6.30 
-	require "$p_path/add_drill_fn.pl";			 #添加钻孔档案号
+	
+	require "add_drill_fn.pl";			 #添加钻孔档案号
 #############________________________________________________________删除一些避开的物体。	
-    $f->COM("affected_layer,name=gtl,mode=single,affected=yes");
-    $f->COM("affected_layer,name=gbl,mode=single,affected=yes");
-    $f->COM("filter_set,filter_name=popup,update_popup=no,include_syms=r126\;zflc");
-    $f->COM("filter_area_strt");
-    $f->COM("filter_area_end,layer=,filter_name=popup,operation=select,
-            area_type=none,inside_area=no,intersect_area=no,lines_only=no,
-            ovals_only=no,min_len=0,max_len=0,min_angle=0,max_angle=0");
-    $f->COM("filter_reset,filter_name=popup");
-    $f->COM("sel_delete");
-    $f->COM("affected_layer,name=gbl,mode=all,affected=no");
+$f->COM("affected_layer,name=gtl,mode=single,affected=yes");
+$f->COM("affected_layer,name=gbl,mode=single,affected=yes");
+
+$f->COM("filter_set,filter_name=popup,update_popup=no,include_syms=r126\;zflc");
+$f->COM("filter_area_strt");
+$f->COM("filter_area_end,layer=,filter_name=popup,operation=select,
+        area_type=none,inside_area=no,intersect_area=no,lines_only=no,
+        ovals_only=no,min_len=0,max_len=0,min_angle=0,max_angle=0");
+$f->COM("filter_reset,filter_name=popup");
+
+$f->COM("sel_delete");
+$f->COM("affected_layer,name=gbl,mode=all,affected=no");
 #############
 	##require "report_result.pl";
     $f->COM('disp_on');
-    p__('The pnl is ok,Good luck to you!');
+
+p__('The pnl is ok,Good luck to you!');
+	
 	_schedule(100);  
 	#sleep 1;
 exit;

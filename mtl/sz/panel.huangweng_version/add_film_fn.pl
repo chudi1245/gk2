@@ -31,9 +31,6 @@ foreach  (0..$#layer_line){
 		$mirror='no';
 		$fnx=$main::SR_xmin +0.6;
 	}
-    
-    if ($fnx > $main::fn_xmax){ $main::fn_xmax = $fnx }
-    
 	##$fny +=0.135;
 	##$fnx+=0.60;
 	clear($layer_line[$_]);

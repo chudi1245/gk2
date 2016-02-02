@@ -61,7 +61,7 @@ close WF;
 &vigui();
 
 sub vigui {
-	use Tk;
+	use Win32;
 	use  encoding  'euc_cn' ; 
 	my $mw = MainWindow->new(-title => "Write by Mobin" ); 
 	$mw->geometry("280x50+200+180");

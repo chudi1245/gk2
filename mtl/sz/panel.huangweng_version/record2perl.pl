@@ -36,8 +36,8 @@ $file =~ s/\\\n//g;
 $file =~ s/\\//g;
 
 print "#!$perl_path\n";
-print "use C;\n";
-print "use Tk;\n";
+print "use FBI;\n";
+print "use Win32;\n";
 print "use $genesis_perl_lib_name;\n\n";
 
 print "\$host = shift;\n";

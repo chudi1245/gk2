@@ -3,7 +3,7 @@ print "Hello, World...\n";
 
 #!/usr/bin/perl
 
-use C;
+use FBI;
 use Genesis;
 use Encode;
 use encoding 'euc_cn';

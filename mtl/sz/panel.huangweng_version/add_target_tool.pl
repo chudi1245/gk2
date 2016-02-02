@@ -38,22 +38,14 @@ if ($main::layer_number > 4
 }
 
 ##加工具孔
-##goto LABEL_TARGET_RIVET_TOOL if ($main::layer_number < 6  );
+goto LABEL_TARGET_RIVET_TOOL if ($main::layer_number < 6  );
 
-if	($main::layer_number > 4  or 
-	($main::layer_number == 4 and @{$main::layer_class{inner}}[0] =~ m/l2b/i ) ) {
-
-	clear();
-	affected_layer('yes','single',@add_layer);
-	cur_atr_set('.out_scale');
-	add_target_tool('gj');
-	cur_atr_set();
-	clear();
-
-}
-else{
-	goto LABEL_TARGET_RIVET_TOOL;
-}
+clear();
+affected_layer('yes','single',@add_layer);
+cur_atr_set('.out_scale');
+add_target_tool('gj');
+cur_atr_set();
+clear();
 
 ########################  子程序  ##############
 sub add_target_rpad{

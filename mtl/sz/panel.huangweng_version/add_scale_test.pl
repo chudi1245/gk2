@@ -2,36 +2,33 @@ use strict;
 use warnings;
 my($px,$py)=($main::px,$main::py);
 my $class=\%main::layer_class;
-
-my $coord_line=[
-	{x=>0.158,   y=>0.158              },
-	{x=>0.158,   y=>int($py-0.4)+0.158 },
-	{y=>0.158,   x=>int($px-0.4)+0.158 },
-]; 
-
-my $bb_distance = 1;
-my $bb_base_x = $main::SR_xmin-0.080;
-my $bb_base_y = $main::SR_ymin-0.080;
-my $bb_qty_x = int(($main::SR_xmax - $bb_base_x) / $bb_distance); 
-my $bb_qty_y = int(($main::SR_ymax -0.3 - $bb_base_y) / $bb_distance); 
+  
 my $coord_unline=[
-	{x=>$main::SR_xmin-0.080,   y=>$main::SR_ymin-0.080 },
-	#{x=>$main::SR_xmin-0.080,   y=>int($main::SR_ymax-$main::SR_ymin)+($main::SR_ymin-0.080) }, 
-	#{y=>$main::SR_ymin-0.080,   x=>int(  $main::silk_ref[0]->{x} - $main::SR_ymin - 0.1  ) + $main::SR_xmin - 0.080 }, 
+	{x=>$main::SR_xmin-0.080, y=>$main::SR_ymin-0.080},
 ];
 
-foreach  (1..$bb_qty_x ) {
-    my $x = $bb_base_x + $_*$bb_distance;
-    if ($x > $main::fn_xmax){
-         push @$coord_unline, {x=>$x, y=>$bb_base_y },
+my $x_base = $main::SR_xmin-0.080;
+my $y_base = $main::SR_ymin-0.080;
+my $x_bb_count = int($main::silk_ref[0]->{x}  - $x_base - 0.05);
+my $y_bb_count = int($main::SR_ymax - $y_base - 0.05 );
+
+my $coord_unline=[
+	{x=>$x_base,   y=>$y_base},
+	#{x=>$main::SR_xmin-0.080,   y=>int($main::SR_ymax-$main::SR_ymin)+($main::SR_ymin-0.080) }, 
+	#{y=>$main::SR_ymin-0.080,   x=>int(  $main::silk_ref[0]->{x} - $main::SR_ymin - 0.1  ) + $main::SR_xmin - 0.080 },
+];
+foreach(1..$x_bb_count){
+    if ( ($x_base + $_) > $main::fn_xmax ){
+        push @$coord_unline, {x=>$x_base + $_, y=>$y_base };
     }
 }
-foreach  (1..$bb_qty_y ) {
-    push @$coord_unline, {x=>$bb_base_x ,   y=>$bb_base_y + $_*$bb_distance },
+foreach(1..$y_bb_count){
+    push @$coord_unline, {x=>$x_base , y=>$y_base + $_ };
 }
 
 ##main::silk_ref
 cur_atr_set('.out_scale');
+
 if ( exists $class->{outer} ){
 	clear();
 	affected_layer('yes','single',@{$class->{outer}},);

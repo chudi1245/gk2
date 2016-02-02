@@ -1,6 +1,6 @@
 #!c:/bin/perl
-use C;
-use Tk;
+use FBI;
+use Win32;
 use Genesis;
 
 $host = shift;

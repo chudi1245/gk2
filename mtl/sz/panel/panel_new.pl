@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 ##use lib "D:/all/camp/panel/panel";
-use Win32;
+use Tk;
 use Genesis;
 use FBI;
 use Encode ;
@@ -50,6 +50,7 @@ if ($test_orignet eq 'no') {
 	exit;
 }
 
+=head
 if ( exists_layer('gtl')  eq  'yes' ) {
 	my $filepath = "c:/genesis/fw/jobs/$JOB/output/net.log";
 	if (-e $filepath) {
@@ -66,7 +67,7 @@ if ( exists_layer('gtl')  eq  'yes' ) {
 		exit; 
 	}
 } 
-
+=cut
 
 
 ###_________________________________________
@@ -138,15 +139,15 @@ if ($layer_number > 2) {
 		$mw->Entry(-textvariable=>\$y_scale[$_],-width=>10,)->grid(-column=>4, -row=>$_+$add);
 	} 
 }	
-$mw->Button(-text=>decode('utf8','缩放相同'),-width=>10,-command=>\&same_scale)->grid(-column=>5, -row=>9);
+$mw->Button(-text=>decode('utf8','same scale'),-width=>10,-command=>\&same_scale)->grid(-column=>5, -row=>9);
 
-$mw->Button(-text=>decode('utf8','刷新'),-width=>10,-command=>\&brush)->grid(-column=>0, -row=>50);
-$mw->Button(-text=>decode('utf8','缺省'),-width=>10,-command=>\&default)->grid(-column=>1, -row=>50);
+$mw->Button(-text=>decode('utf8','rush'),-width=>10,-command=>\&brush)->grid(-column=>0, -row=>50);
+$mw->Button(-text=>decode('utf8','default'),-width=>10,-command=>\&default)->grid(-column=>1, -row=>50);
 
 ##$mw->Button(-text=>decode('utf8','全设置'),-width=>10,-command=>\&brush)->grid(-column=>3, -row=>50);
 ##$mw->Button(-text=>decode('utf8','全设置'),-width=>10,-command=>\&default)->grid(-column=>4, -row=>50);
 $mw->Entry(-textvariable =>\$FN_Version,  -width=>10,)->grid(-column=>0, -row=>51);
-$mw->Label(-text=>decode('utf8','版本'),-width=>10,)->grid(-column=>1, -row=>51);
+$mw->Label(-text=>decode('utf8','version'),-width=>10,)->grid(-column=>1, -row=>51);
 
 $mw->Button(-text=>decode('utf8','Apply'),-width=>10,-command=>\&apply)->grid(-column=>5, -row=>51);
 $mw->Label(-textvariable=>\$tk_info,-width=>70,-relief=>'groo')->grid(-column=>0, -row=>52,-columnspan=>6);
@@ -222,6 +223,8 @@ sub apply {
 	require "add_target_rivet.pl";  ##加铆钉孔。
 	require "add_target_tool.pl";   ##加工具孔。
 	require "add_confine_line.pl";  ## 加边角线。
+
+	require "add_layer_number.pl";     ###加层数字；
 
 	require "add_vut_toolhole.pl";       ###加vut定位孔；
 
